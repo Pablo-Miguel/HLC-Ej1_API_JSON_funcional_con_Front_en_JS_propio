@@ -1,0 +1,15 @@
+@import url('https://fonts.cdnfonts.com/css/kosugi-maru');
+/* font-family: 'Kosugi Maru', sans-serif; */
+
+body{
+    padding: 20px;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+#formContent {
+    margin: 20px;
+}
+
+#content {
+    margin: 20px;
+}
