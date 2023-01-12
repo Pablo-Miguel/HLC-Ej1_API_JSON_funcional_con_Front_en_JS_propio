@@ -1,0 +1,24 @@
+{
+  "name": "hlc-ej1_api_json_funcional_con_front_en_js_propio",
+  "version": "1.0.0",
+  "description": "Node using Express to serve a page completed with info from an external API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pablo-Miguel/HLC-Ej1_API_JSON_funcional_con_Front_en_JS_propio.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "API"
+  ],
+  "author": "Pablo-Miguel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pablo-Miguel/HLC-Ej1_API_JSON_funcional_con_Front_en_JS_propio/issues"
+  },
+  "homepage": "https://github.com/Pablo-Miguel/HLC-Ej1_API_JSON_funcional_con_Front_en_JS_propio#readme"
+}
