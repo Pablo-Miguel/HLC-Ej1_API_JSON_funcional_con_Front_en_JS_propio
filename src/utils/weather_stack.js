@@ -2,24 +2,24 @@ const fs = require("fs");
 const request = require("postman-request");
 
 const jsonList = fs.readFileSync("./claves_APIs.json");
-const keyWeatherStack = JSON.parse(jsonList).WeatherStack;
+const KEY_WEATHER_STACK = JSON.parse(jsonList).WeatherStack;
 
 const weather_stack = (locality, callback) => {
-    request(`http://api.weatherstack.com/current?access_key=${keyWeatherStack}&query=${locality}&units=m`, (error, response, body) => {
+    request(`http://api.weatherstack.com/current?access_key=${KEY_WEATHER_STACK}&query=${locality}&units=m`, (error, response, body) => {
         
         if(response.statusCode == 200){
 
             const objRes = JSON.parse(body);
 
             if(!objRes.hasOwnProperty('request')){
-                callback(-1, {
+                callback({
                     error: -1,
                     errorDescrption: 'Imposible de encontrar la localización buscada. Pruebe de nuevo.',
                     internalErrorDetail: error
                 });
             } else {
 
-                callback(0, {
+                callback({
                     error: 0,
                     locationType: objRes.request.type,
                     localityName: objRes.location.name,
@@ -38,7 +38,7 @@ const weather_stack = (locality, callback) => {
             }
 
         } else {
-            callback(-1, {
+            callback({
                 error: -1,
                 errorDescrption: '¡No se ha podido conectar al servidor de localizaciones!',
                 internalErrorDetail: error

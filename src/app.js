@@ -15,8 +15,8 @@ app.get('/weather', (req, res) => {
         });
     }
 
-    weather_stack(req.query.locality, (cod_res, resObj) => {
-        if(cod_res === -1){
+    weather_stack(req.query.locality, (resObj) => {
+        if(resObj.error === -1){
             return res.send(resObj);
         }
         
