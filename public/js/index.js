@@ -1,6 +1,9 @@
 let txtLocation, btnSend, content;
 
 const fetchWeatherDataHandler = (event) => {
+
+    content.innerHTML = "<p>Loading...</p>";
+
     if(txtLocation.value != ''){
         fetch(`http://localhost:3000/weather?locality=${txtLocation.value}`)
         .then((res) => {
