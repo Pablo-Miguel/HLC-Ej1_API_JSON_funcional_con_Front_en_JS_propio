@@ -10,6 +10,7 @@ app.use(express.static(publicDirectoryPath));
 app.get('/weather', (req, res) => {
     if(!req.query.locality){
         return res.send({
+            error: -1,
             errorDescrption: 'No ha introducido localidad.',
             internalErrorDetail: 'URL_ERROR: locality param at fetch query doesn\'t exists, please repeat the query with correct params.'
         });
